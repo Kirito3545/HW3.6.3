@@ -1,20 +1,46 @@
-﻿// HW3.6.3.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
-#include <iostream>
+﻿#include <iostream>
+#include <string>
+#include "Figure.h"
+#include "Triangle.h"
+#include "RightTriangle.h"
+#include "IsoscelesTriangle.h"
+#include "EquilateralTriangle.h"
+#include "Quadrilateral.h"
+#include "Rectangle.h"
+#include "Square.h"
+#include "Parallelogram.h"
+#include "Rhomb.h"
+#include "PrintFigure.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	setlocale(LC_ALL, "Russian"); 
+	system("chcp 1251");
+
+	Triangle Triangle1(10, 20, 30, 50, 60, 70);
+	printFigure(&Triangle1);
+
+	RightTriangle rightTriangle1(10, 20, 30, 50, 60);
+	printFigure(&rightTriangle1);
+
+	IsoscelesTriangle isoscelesTriangle1(10, 20, 50, 60);
+	printFigure(&isoscelesTriangle1);
+
+	EquilateralTriangle equilateralTriangle1(30);
+	printFigure(&equilateralTriangle1);
+
+	Quadrilateral Quadrilateral1(10, 20, 30, 40, 50, 60, 70, 80);
+	printFigure(&Quadrilateral1);
+
+	Rectangle Rectangle1(10, 20);
+	printFigure(&Rectangle1);
+
+	Square Square1(20);
+	printFigure(&Square1);
+
+	Parallelogram Parallelogram1(20, 30, 30, 40);
+	printFigure(&Parallelogram1);
+
+	Rhomb Rhomb1(30, 30, 40);
+	printFigure(&Rhomb1)
 }
-
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
